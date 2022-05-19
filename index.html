@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Jun's&nbsp;engineer&nbsp;Portfolio</title>
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" >
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- JS -->
+    <script src="https://kit.fontawesome.com/d2aaa9742b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart1);
+      google.charts.setOnLoadCallback(drawChart2);
+      google.charts.setOnLoadCallback(drawChart3);
+      google.charts.setOnLoadCallback(drawChart4);
+      google.charts.setOnLoadCallback(drawChart5);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart1() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["PGM言語", 4, "#b87333"],
+            ["インフラ", 3, "silver"],
+            ["データベース", 4, "gold"],
+            ["通信", 3, "#b87333"],
+            ["セキュリティ", 3, "silver"],
+            ["その他", 3, "gold"],
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        // view.setColumns([0, 1,
+        //                 { calc: "stringify",
+        //                     sourceColumn: 1,
+        //                     type: "string",
+        //                     role: "annotation" },
+        //                 2]);
+
+        var options = {
+            title: "ITスキル",
+            width: 300,
+            height: 300,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+            vAxis:{minValue:0, maxValue:5, ticks:[0,1,2,3,4,5]},
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values1"));
+        chart.draw(view, options);
+      }
+      function drawChart2() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["個人請負", 1, "#b87333"],
+            ["社内業務", 3, "silver"],
+            ["メンバー", 5, "gold"],
+            ["プロジェクトリーダー", 5, "#b87333"],
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        // view.setColumns([0, 1,
+        //                 { calc: "stringify",
+        //                     sourceColumn: 1,
+        //                     type: "string",
+        //                     role: "annotation" },
+        //                 2]);
+
+        var options = {
+            title: "ヒューマンスキル",
+            width: 300,
+            height: 300,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+            vAxis:{minValue:0, maxValue:5, ticks:[0,1,2,3,4,5]},
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values2"));
+        chart.draw(view, options);
+      }
+      function drawChart3() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["物販", 2, "#b87333"],
+            ["損保", 5, "silver"],
+            ["生保", 5, "gold"],
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        // view.setColumns([0, 1,
+        //                 { calc: "stringify",
+        //                     sourceColumn: 1,
+        //                     type: "string",
+        //                     role: "annotation" },
+        //                 2]);
+
+        var options = {
+            title: "業種スキル",
+            width: 300,
+            height: 300,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+            vAxis:{minValue:0, maxValue:5, ticks:[0,1,2,3,4,5]},
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values3"));
+        chart.draw(view, options);
+      }
+      function drawChart4() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["HTML,CSS", 5, "#b87333"],
+            ["JavaScrpt", 5, "silver"],
+            ["PL/SQL", 5, "gold"],
+            ["COBOL", 3, "#b87333"],
+            ["C", 5, "silver"],
+            ["Perl", 3, "gold"],
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        // view.setColumns([0, 1,
+        //                 { calc: "stringify",
+        //                     sourceColumn: 1,
+        //                     type: "string",
+        //                     role: "annotation" },
+        //                 2]);
+
+        var options = {
+            title: "プログラミングスキル（実務）",
+            width: 300,
+            height: 300,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+            vAxis:{minValue:0, maxValue:5, ticks:[0,1,2,3,4,5]},
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values4"));
+        chart.draw(view, options);
+      }
+      function drawChart5() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["Ruby & Rails", 1, "#b87333"],
+            ["Java & JSP", 1, "silver"],
+            ["jQuery", 1, "gold"],
+            ["Python", 1, "#b87333"],
+            ["PHP", 1, "silver"],
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        // view.setColumns([0, 1,
+        //                 { calc: "stringify",
+        //                     sourceColumn: 1,
+        //                     type: "string",
+        //                     role: "annotation" },
+        //                 2]);
+
+        var options = {
+            title: "プログラミングスキル（自己学習）",
+            width: 300,
+            height: 300,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+            vAxis:{minValue:0, maxValue:5, ticks:[0,1,2,3,4,5]},
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values5"));
+        chart.draw(view, options);
+      }
+    </script>
+</head>
+<body>
+<header class="header">
+    <span class="sp-nav-toggle">
+        <i></i>
+        <i></i>
+        <i></i>
+    </span>
+    <nav class="sp-nav">
+        <ul>
+            <li><a href="#">TOP</a></li>
+            <li><a href="#about">About me</a></li>
+            <li class="menu-home">
+                <a href="#works">→ポートフォリオ</a>
+                <ul>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#skillset">My skill set</a></li>
+                </ul>
+            </li>
+        <li><a href="#inquiry">お問い合わせ</a></li>
+            <li><a href="#history">Site History</a></li>
+        </ul>
+    </nav>
+    <nav class="gnav">
+        <div class="logo-area">
+            <a href="#" class="logo">Jun's&nbsp;Engineer&nbsp;Portfolio</a>
+            <!-- <p>..enjoy life & work..</p> -->
+        </div>
+        <div class="menu-area">
+            <ul>
+                <li>
+                    <a href="#">TOP</a>
+                </li>
+                <li>
+                    <a href="#about">About me</a>
+                </li>
+                <li class="menu-home">
+                    <a href="#works">ポートフォリオ<i class="fa-solid fa-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#skillset">My skill set</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#inquiry">お問い合わせ</a>
+                </li>
+                <li>
+                    <a href="#history">Site History</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="container">
+        <main>
+            <div class="key-visual">
+                <!-- <img src="img/cropped-nicole-honeywill-730102-unsplash.jpg" alt="key-visual"> -->
+                <!-- <img src="img/test3.jpg" alt="key-visual"> -->
+                <p class="page-lead">
+                    <span> about this site</span><br>
+                    &emsp;エンジニアjunのポートフォリオサイトへようこそ！<br>
+                    旅、歌う事、バドミントンが好き。プログラミングはたぶん好き。トップ画はベネズエラのギアナ高地を旅してた時のです。<br>
+                    &emsp;しばらくバックエンドに携わってたけど、色々考えてフロントエンドに挑戦！身近な人たちに少しでも喜んでもらえるようなものを作ることを目指してます。
+                    よかったら少しでものぞいていってください。<br>
+                </p>
+            </div>
+            <h1 id="about">About me</h1>
+            <article>
+                <div class="aboutme">
+                    <div class="aboutme1">
+                        <img src="./img/baku.jpg" alt="baku">
+                        <div class="profile-name-block">
+                            <p>Junichi Watanabe</p>
+                            <i class="fa-brands fa-twitter-square"></i>
+                            <i class="fa-brands fa-facebook-square"></i>
+                            <i class="fa-brands fa-instagram-square"></i>
+                        </div>
+                   </div>
+                    <div class="aboutme2">
+                        <p class="">
+                            栃木県那須辺り出身、就職氷河期世代のITエンジニアです。<br><br>
+                
+                            &emsp;工学系の大学を卒業して群馬県の万座温泉でリゾートバイトを半年ほどした後、家庭教師やマックなどでフリーターをしてました。<br>
+                            不景気真っ只中でそろそろ定職に就かないとと就職した先は、ブラック企業のシステムエンジニア。主にバックエンドの保守開発でした。<br><br>
+                            &emsp;ネットで調べてもあまり情報無い時代でして技術は見て覚えろと教えられ、お前の作業効率が悪いからと言われサービス残業をするのが当たり前の雰囲気。月間の残業時間が常に５０時間超で時には１００超のことも笑。
+                            同期が次々と辞めていく中で生保や損保の大規模システムに対しCOBOLやCなどを使って、数１０年開発に携わってきました。<br><br>
+                            そして数年前のコロナ直前に疲れ果てた中で退職。。。<br>
+                            IT、プログラミングが面白いなんてほとんど感じた事なかったです。<br><br>
+                            そんな中でようやく気持ちの余裕が出てきて周りを見渡すと、いつの間にか多くの業界や消費者などの中でITがすごく盛り上がっていて。<br><br>
+                
+                            ・・・プログラミングって楽しいよね。ITの力ってすごいね。<br><br>
+                
+                            そんな声がところどころから聞こえてきてました。<br><br>
+                
+                            そこで、もうちょっとだけやってみるかと今度はフロントエンドを選びました。<br>
+                            出来るだけモダンなシステムを学ぶべく自己学習から始めて学校にも通った後、
+                            当ポートフォリオを作成して現在。就職活動中となります。<br><br>
+                            今度こそ楽しくやれたらよいなー<br>
+                            どうぞよろしくお願いします。
+                        </p>
+                    </div>
+                </div>
+                
+            </article>
+            <h1 id="works">Works</h1>
+            <article>
+                <div class="explanation">
+                    <p>・前職を退職後に職業訓練校に通って学んだことを中心にアップしてます。数時間で作ったものから複数人で２週間程かけたものまであります。まだ少ないですが随時アップしていけたらと思います。
+                    </p>
+                </div>
+                <div class="work">
+                    <div class="modalOpen" data-modal="modal01">
+                        <p>Unityちゃんダンスゲーム</p>
+                        <p>◆使用言語</p>
+                        <p>・Unity</p>
+                        <div class="img_wrap">
+                            <img src="img/danceGame_top.png">
+                            <!-- <iframe src="http://192.168.1.206:8887/" scrolling="no" frameborder="0"></iframe> -->
+                        </div>
+                    </div>
+                    <div class="modalOpen" data-modal="modal02">
+                        <p>ボールゲーム</p>
+                        <p>◆使用言語</p>
+                        <p>・Unity(WebGL出力)</p>
+                        <div class="img_wrap">
+                            <img src="img/pinBallGame.png">
+                        </div>
+                    </div>
+                    <div class="modalOpen" data-modal="modal03">
+                        <p>海外旅行のアルバム</p>
+                        <p>◆使用言語</p>
+                        <p>・HTML, CSS, JavaScript,jQuery</p>
+                        <div class="img_wrap">
+                            <img src="img/myTrip.png">
+                        </div>
+                    </div>
+                    <div class="modalOpen" data-modal="modal04">
+                        <p>Webスクレイピング</p>
+                        <p>◆使用言語</p>
+                        <p>・Python</p>
+                        <div class="img_wrap">
+                            <img src="img/webScraping01.png">
+                        </div>
+                    </div>
+                    <div class="modalOpen" data-modal="modal05">
+                        <p>twitterクローン</p>
+                        <p>◆使用言語</p>
+                        <p>・Java,JSP(HTML)</p>
+                        <div class="img_wrap">
+                            <img src="img/twitterCone01.png">
+                        </div>
+                        <!-- 15パネルゲーム C:\Users\watan\Documents\勉強\jssLessons\20211217\web11\ex1.html-->
+                        <!-- サークルゲーム C:\Users\watan\Documents\勉強\jssLessons\20211217\circle.html -->
+                        <!-- 神経衰弱ゲーム C:\Users\watan\Documents\勉強\jssLessons\cardgame\index.html -->
+                        <!-- テトリス C:\Users\watan\Documents\勉強\jssLessons\211222\tetris.html -->
+                    </div>
+                    <div class="modalOpen" data-modal="modal06">
+                        <p>ポートフォリオサイト</p>
+                        <p>◆使用言語</p>
+                        <p>・HTML,CSS,javascript,jQuery,PHP</p>
+                        <div class="img_wrap">
+                            <img src="img/portfolio.png">
+                        </div>
+                    </div>
+                    <div class="modal" id="modal01">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>Unityちゃんダンスゲーム</h1>
+                                <span class="modalClose">×</span>
+                            </div>
+                            <div class="modal-body">
+                                <p>職業訓練校の課題でチームで作成しました。<br><br>
+                                    ◆どんなアプリ？<br>
+                                      ・ダンスが全く出来ないUnityちゃんが、様々なダンスマスターからダンスを盗んで
+                                   トップダンスマスターになるまでのストーリーをゲームにした。<br><br>
+                                    ◆ポイント<br>
+                                      ・私が開発した部分は以下３点です。 <br>
+                                      &emsp;1.Unityちゃんがダンスマスターにパンチを当てると、マスターが消えてダンスが踊れるようになる。<br>
+                                      &emsp;2.踊れるようになったダンスを『2.ゲーム中』の画面上部にあるようにサブ画面に表示させる。<br>
+                                      &emsp;3.『4.ミッション失敗』画面の企画から作成まで全部</p><br>
+                                <a href="danceGameVideo.html" class="underline" target="_blank" rel="noopener noreferrer">動画を用意してます。ここのリンクをクリック。</a><br>
+                                <a href="https://github.com/junjapan/DanceGame1" class="underline" target="_blank" rel="noopener noreferrer">gitHubの参照。ここのリンクをクリック。</a>
+                                <div class="img_wrap_p">
+                                    <div class="img_wrap_c modalOpen" data-modal="modal010c">
+                                        <p>1.スタート画面</p>
+                                        <img src="img/danceGame_top.png">
+                                    </div>
+                                    <div class="modal" id="modal010c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>test</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/danceGame_top.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="img_wrap_c modalOpen" data-modal="modal011c">
+                                        <p>2.ゲーム中</p>
+                                        <img src="img/danceGame_in04.png">
+                                    </div>
+                                    <div class="modal" id="modal011c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>test</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/danceGame_in04.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="img_wrap_c modalOpen" data-modal="modal012c">
+                                        <p>3.ミッション成功</p>
+                                        <img src="img/danceGame_goodEnd.png">
+                                    </div>
+                                    <div class="modal" id="modal012c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>test</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/danceGame_goodEnd.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="img_wrap_c modalOpen" data-modal="modal013c">
+                                        <p>4.ミッション失敗</p>
+                                        <img src="img/danceGame_badEnd.png">
+                                    </div>
+                                    <div class="modal" id="modal013c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>test</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/danceGame_badEnd.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="img_wrap_c modalOpen" data-modal="modal014c">
+                                        <p>5.エンドロール</p>
+                                        <img src="img/danceGame_Endroll.png">
+                                    </div>
+                                    <div class="modal" id="modal014c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>test</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/danceGame_Endroll.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal02">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>ボールゲーム</h1>
+                                <span class="modalClose">×</span>
+                            </div>
+                            <div class="modal-body">
+                                <p>職業訓練校の授業でUnityの教科書通りに作成しました。<br><br>
+                                    ◆どんなアプリ？<br>
+                                      ・３色の光玉を同じ色の場所に置くゲーム。全て置けたらクリア。<br><br>
+                                    ◆ポイント<br>
+                                    ・Unityで作っただけだと限られた人のみのゲームだったので、WebGLという技術を使ってWeb技術に変換してWebで遊べるようにしました。<br><br>
+                                    ◆遊び方（パソコンのみです）<br>
+                                    ・キーボードの『Z』を押してる間ずっと光玉が浮く<br>
+                                    ・キーボードの『→↓←↑』を押してる間ずっと光玉が矢印の方向に動く<br>
+                                    ・３色の光玉を同じ色の場所に置く。全て置けたらクリア。<br>
+                                </p><br>
+                                <a href="./illumiWeb01/index.html"  class="underline" target="_blank" rel="noopener noreferrer">実物みれます。ここのリンクをクリック。</a><br>
+                                <a href="https://github.com/junjapan/illumiball"  class="underline" target="_blank" rel="noopener noreferrer">gitHubの参照。ここのリンクをクリック。</a>
+                                <div class="img_wrap_p">
+                                    <div class="img_wrap_c modalOpen" data-modal="modal020c">
+                                        <img src="img/pinBallGame.png">
+                                    </div>
+                                    <div class="modal" id="modal020c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>ボールゲーム</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/pinBallGame.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal03">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>海外旅行のアルバム</h1>
+                                <span class="modalClose">×</span>
+                            </div>
+                            <div class="modal-body">
+                                <p>職業訓練校の課題で作成しました。<br><br>
+                                    ◆どんなアプリ？<br>
+                                      ・今まで行った海外旅行の中でベスト３の写真にコメント付きで電子アルバム化した。<br><br>
+                                    ◆ポイント<br>
+                                    ・jQueryを使用して実現したい動きがあってそれを最優先した。ただし色々と中途半端な作りになってます。。いずれ修正したいと思ってます。
+                                </p><br>
+                                <a href="./tripAlbum/index.html"  class="underline" target="_blank" rel="noopener noreferrer">実物みれます。ここのリンクをクリック。</a><br>
+                                <a href="https://github.com/junjapan/Hobby"  class="underline" target="_blank" rel="noopener noreferrer">gitHubの参照。ここのリンクをクリック。</a>
+                                <div class="img_wrap_p">
+                                    <div class="img_wrap_c modalOpen" data-modal="modal030c">
+                                        <img src="img/myTrip.png">
+                                    </div>
+                                    <div class="modal" id="modal030c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>海外旅行のアルバム</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/myTrip.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal04">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>Webスクレイピング</h1>
+                                <span class="modalClose">×</span>
+                            </div>
+                            <div class="modal-body">
+                                <p>職業訓練校の課題で作成しました。<br><br>
+                                    ◆どんなアプリ？<br>
+                                      ・WEBから歌詞情報を取得して電子ファイル化するアプリ。<br><br>
+                                    ◆ポイント<br>
+                                    ・趣味の音楽（バンドのボーカル）でWEBから歌詞カードを作成するのに時間がかかってたので、pythonのWebスクレイピング技術を使うことで実現。<br>
+                                    今まで１曲の歌詞カードを作成するのに１０分くらいかかってたのがこのツールを使うと３分くらいで出来るので今でも重宝してます。</p><br>
+                                <a href="./img/webScraping.mp4"  class="underline" target="_blank" rel="noopener noreferrer">動画を用意してます。ここのリンクをクリック。</a><br>
+                                <a href="https://github.com/junjapan/pyLessons/tree/master/home0125"  class="underline" target="_blank" rel="noopener noreferrer">gitHubの参照。ここのリンクをクリック。</a>
+                                <div class="img_wrap_p">
+                                    <div class="img_wrap_c modalOpen" data-modal="modal040c">
+                                        <img src="img/webScraping01.png">
+                                    </div>
+                                    <div class="modal" id="modal040c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>test</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/webScraping01.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal05">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>twitterクローン</h1>
+                                <span class="modalClose">×</span>
+                            </div>
+                            <div class="modal-body">
+                                <p>職業訓練校の授業でJavaの教科書通りに作成しました。<br><br>
+                                    ◆どんなアプリ？<br>
+                                      ・Web上でtwitterっぽいつぶやきを多人数相互で書き込みと閲覧が出来るアプリ。<br><br>
+                                    ◆ポイント<br>
+                                    ・Javaでwebアプリを作成するフレームワーク(JSP)を使いCRUD処理を実現。<br>
+                                    授業の通りだが、XAMPPを利用してインターネット環境ではなくローカル環境を使用してます。</p><br>
+                                <a href="./img/twitterClone.mp4"  class="underline" target="_blank" rel="noopener noreferrer">動画を用意してます。ここのリンクをクリック。</a><br>
+                                <a href="https://github.com/junjapan/Hobby"  class="underline" target="_blank" rel="noopener noreferrer">gitHubの参照。ここのリンクをクリック。</a>
+                                <div class="img_wrap_p">
+                                    <div class="img_wrap_c modalOpen" data-modal="modal050c">
+                                        <img src="img/twitterCone01.png">
+                                    </div>
+                                    <div class="modal" id="modal050c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>twitterクローン</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/twitterCone01.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal06">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>ポートフォリオサイト</h1>
+                                <span class="modalClose">×</span>
+                            </div>
+                            <div class="modal-body">
+                                <p>職業訓練校が終わって自習して作成しました。<br><br>
+                                    ◆どんなアプリ？<br>
+                                      ・ご覧頂いてる当ホームページになります。Web上で就職活動など自分自身を売り込むためのポートフォリオサイト。<br><br>
+                                    ◆ポイント<br>
+                                    ・以前に実務でも携わったことはあるのですが、代表的なWebセキュリティについて忘れかけていて復習したいなと思ったので、
+                                    お問合せ欄に対してセキュリティ対策※踏まえて一から構築をしました。PHPを使用したがフレームワークは未使用です。<br>
+                                    &emsp;※クロスサイトスクリプティングやクロスサイトリクエストフォージェリ等の対策<br>
+                                    ・レスポンシブ化は作成中
+                                </p>
+                                <div class="img_wrap_p">
+                                    <div class="img_wrap_c modalOpen" data-modal="modal060c">
+                                        <img src="img/portforio01.png">
+                                    </div>
+                                    <div class="modal" id="modal060c">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1>ポートフォリオサイト</h1>
+                                                <span class="modalClose">×</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="img/portforio01.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <h1 id="skillset">My skill set</h1>
+            <article>
+                <div class="explanation">
+                    <p>・１０数年仕事したバックエンド開発時代がメインスキルとなります。自己学習（自習や職業訓練校）で学んだフロントエンドも反映してます。</p>
+                </div>
+                <!--Div that will hold the pie chart-->
+                <div class="skillChart">
+                    <div>
+                        <div id="columnchart_values1"></div>
+                        <p>1.自己学習</p>
+                        <p>2.自己学習で構築</p>
+                        <p>3.実務で利用</p>
+                        <p>4.実務で改修</p>
+                        <p>5.実務で新規構築</p>
+                    </div>
+                    <div>
+                        <div id="columnchart_values2"></div>
+                        <p>1.１年以内の経験</p>
+                        <p>2.１―２年以内</p>
+                        <p>3.２―３年以内</p>
+                        <p>4.３―４年以内</p>
+                        <p>5.４年以上</p>
+                    </div>
+                    <div>
+                        <div id="columnchart_values3"></div>
+                        <p>1.１年以内の経験</p>
+                        <p>2.１―２年以内</p>
+                        <p>3.２―３年以内</p>
+                        <p>4.３―４年以内</p>
+                        <p>5.４年以上</p>
+                    </div>
+                    <div>
+                        <div id="columnchart_values4"></div>
+                        <p>1.１年以内の経験</p>
+                        <p>2.１―２年以内</p>
+                        <p>3.２―３年以内</p>
+                        <p>4.３―４年以内</p>
+                        <p>5.４年以上</p>
+                    </div>
+                    <div>
+                        <div id="columnchart_values5"></div>
+                        <p>1.１年以内の経験</p>
+                        <p>2.１―２年以内</p>
+                        <p>3.２―３年以内</p>
+                        <p>4.３―４年以内</p>
+                        <p>5.４年以上</p>
+                    </div>
+                </div>
+            </article>
+            <h1 id="inquiry">お問い合わせ</h1>
+            <article>
+                <div class="explanation">
+                    <p>最後までご覧頂きありがとうございました。<br>当サイトなど何かコメントありましたら、下記フォームをご利用ください。<br><br></p>
+                </div>
+                <!-- 連絡先フォーム -->
+                <!-- <?php print("Hello World!"); ?> -->
+                <!-- 入力画面 -->
+                <form action="./contactform.php" method="post">
+                    <div class="form-input-area">
+                        <label for="form-name">名前</label>
+                        <input type="text" name="fullname" value="" class="form-input" id="form-name" placeholder="姓名">
+                    </div>
+                    <div class="form-input-area">
+                        <label for="form-email">Eメール</label>
+                        <input type="email" name="email" value="" class="form-input" id="form-email" placeholder="aaaaaa@bbbbb.ccc">
+                    </div>
+                    <div class="form-input-area">
+                        <label for="form-message">本文</label>
+                        <textarea name="message" id="form-message" class="form-input form-textarea" placeholder="コメント入れてください"></textarea>
+                    </div>
+                    <input type="submit" name="confirm" value="確認" class="form-input button">
+                </form>
+            </article>
+            <h1 id="history">Site History</h1>
+            <article>
+                <section>
+                    <div>
+                        <header>
+                            <p>2022年4月15日</p>
+                        </header>
+                    </div>
+                    <div>
+                        <p>当ポートフォリオを初作成<p>
+                        <p>・HTML,CSS,JS,PHPを使用して作成</p>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <div class="footer-bottom">
+                <small>Copyright &copy; 2022- Jun's&nbsp;Engineer&nbsp;Portfolio All&nbsp;Rights Reserved.</small>
+            </div>
+        </footer>
+    </div>
+    <script src="js/common.js"></script>
+</body>
+</html>

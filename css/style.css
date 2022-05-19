@@ -1,0 +1,463 @@
+/* 共通 */
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 70px;
+    background-color:rgba(256, 256, 256, 0.5);
+}
+
+.container {
+    position: relative;
+    top: 80px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+h1 {
+    border-bottom: solid 1px #ddd;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+.explanation {
+    margin: 1%;
+}
+
+/* ヘッダーエリア */
+.logo {
+    color: #333;
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.gnav {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.sp-nav {
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+}
+
+.menu-area > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-area li {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.menu-area a {
+    font-size: .9rem;
+}
+
+.menu-area a i {
+    font-size: .6rem;
+    padding-left: .5rem;
+}
+
+.menu-home ul {
+    position: absolute;
+    /* top: 45px; */
+    visibility: hidden;
+}
+
+.menu-home {
+    padding-left: 15px;
+}
+
+.menu-home:hover ul li {
+    visibility: visible;
+    opacity: 1;
+    transition: 1.5s;
+}
+
+.menu-home li {
+    width: 200px;
+    border: 1px solid #e6e6e6 ;
+    padding: 14px 16px;
+    box-shadow: 0 1px 3px #ddd;
+    background-color: white;
+    opacity: 0;
+    display: block;
+}
+
+.menu-area ul a:hover, .modal-body .underline:hover{
+    color: #c49029;
+}
+
+.modal-body .underline {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* TOPページ */
+.key-visual {
+    margin-bottom: 10px;
+    position: relative;
+    height: 600px;
+	background: url(../img/test3.JPG);
+    filter: grayscale(0%);
+	background-size: cover;
+}
+
+.page-lead {
+    position: absolute;
+    top:-60px;
+    left: 0;
+    right: 0;
+    width: 90%;
+    color: #000;
+    font-size: 1.0rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    line-height: 1.8;
+	backdrop-filter: blur(15px) brightness(90%);
+}
+
+.page-lead span {
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* About me */
+
+.aboutme {
+    display: flex;
+    font-size: 0.8rem;
+    padding: 1%;
+}
+
+.aboutme .aboutme1{
+    padding: 1%;
+}
+.aboutme .aboutme2{
+    padding: 1%;
+}
+
+.profile-name-block {
+    text-align: center;
+}
+.profile-name-block p {
+    font-weight: bold;
+}
+
+.profile-name-block i {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    color: #aaa;
+    font-size: 1.4rem;
+}
+
+/* Works */
+.work {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.work .modalOpen {
+    width: 300px;
+    margin: 5px;
+}
+
+.img_wrap{
+    /* border: 1px solid #ddd; */
+    width:100%;
+    height: 226px;
+    margin: 10px auto 15px;
+    transition-duration: 0.5s;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .img_wrap:hover{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    transform: translateY(-10px);
+    transition-duration: 0.1s;
+    border-radius: 5px;
+  }
+/* モーダルウィンドウの設定 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+background-color: #f4f4f4;
+margin: 7% auto;
+height: 80%;
+width: 70%;
+box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+animation-name: modalopen;
+animation-duration: 1s;
+}
+
+@keyframes modalopen {
+from {opacity: 0}
+to {opacity: 1}
+}
+
+.modal-header h1 {
+margin: 1rem 0;
+}
+
+.modal-header {
+background: lightblue;
+padding: 3px 15px;
+display: flex;
+justify-content: space-between;
+}
+
+.modalClose {
+font-size: 2rem;
+}
+
+.modalClose:hover {
+cursor: pointer;
+}
+
+.modal-body {
+padding: 10px 20px;
+color: black;
+height: 80%;
+overflow: scroll;
+}
+
+.modal-body img {
+    width: 100%;
+}
+
+.img_wrap_p {
+    display: flex;
+    flex-wrap: wrap;
+}
+.img_wrap_p .img_wrap_c {
+    width: 30%;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+/* My skill set */
+.skillChart {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+
+/* お問い合わせ */
+.form-input-area {
+    margin-bottom: 1rem;
+}
+.form-input {
+    display: block;
+    margin: 0.1rem;
+    border-left: solid #ddd 0.1rem;
+    border-top: solid #ddd 0.1rem;
+}
+
+#form-email {
+    width: 45%;
+}
+
+.form-textarea {
+    width: 60%;
+    height: 30%;
+}
+
+/* Site History */
+/* 今のところ無し */
+
+
+/* フッター */
+.footer-bottom {
+    border-top: solid 1px #ddd;
+    text-align: center;
+    padding: 0.1rem;
+}
+
+/* @media screen and (max-width: 783px) { */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 0.8rem;
+        margin: 0.1rem;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    header {
+        margin-top: 1rem;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .gnav {
+        margin-top: 0;
+        margin-bottom: 3rem;
+        position: fixed;
+        top: 0px;
+        width: auto;
+    }
+
+    .menu-area {
+        display: none;
+    }
+
+    main > div > img {
+        margin: 0 calc(50% - 50vw);
+        max-width: 100vw;
+    }
+
+    .page-lead {
+        color: #666;
+        font-size: 1.2rem;
+        margin: 3rem 0;
+    }
+
+    article div:last-child a {
+        font-size: 1rem;
+    }
+
+    article div:last-child p {
+        font-size: .8rem;
+    }
+
+    .sp-nav-toggle {
+        margin-left: auto;
+        display: block;
+        position: relative;
+        width: 1.2rem;
+        height: 1.2rem;
+        cursor: pointer;
+    }
+
+    .sp-nav-toggle i {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        transition: transform .5s, opacity .5s;
+    }
+
+    .sp-nav-toggle i:nth-child(1) {
+        top: 0;
+    }
+
+    .sp-nav-toggle i:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .sp-nav-toggle i:nth-child(3) {
+        bottom: 0;
+    }
+
+    .sp-nav-toggle.show i:nth-child(1) {
+        transform: translateY(9.5px) rotate(-45deg);
+        /* opacity: 1; */
+        /* visibility: visible; */
+    }
+
+    .sp-nav-toggle.show i:nth-child(2) {
+        opacity: 0;
+    }
+
+    .sp-nav-toggle.show i:nth-child(3) {
+        transform: translateY(-9.5px) rotate(45deg);
+        /* opacity: 1; */
+        /* visibility: visible; */
+    }
+
+    .sp-nav {
+        position: fixed;
+        top: 2.5rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        opacity: 0;
+        background-color: rgba(256, 256, 256, 0.9);
+        /* visibility: hidden; */
+        transition: opacity .5s visibility .5s;
+    }
+
+    .sp-nav .menu-home ul {
+        top: 120px;
+        right: 100px;
+    }
+    .sp-nav.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .sp-nav.show ul li {
+        text-align: center;
+    }
+
+    .sp-nav.show ul li a {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* .sp-nav.show ul li:first-child a {
+        margin-top: 4rem;
+    } */
+}
+
